@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "express": "3.4.4",
-    "jade": "~0.31.2",
+    "jade": "~1.11.0 ",
     "request": "^2.34.0",
     "nconf": "^0.6.9",
     "winston": "^0.7.3",
@@ -18,7 +18,7 @@
     "passport": "^0.2.0",
     "passport-local": "^1.0.0",
     "connect-mongo": "^0.4.0",
-    "elasticsearch": "^2.1.4"
+    "elasticsearch": "^11.0.1"
   },
   "devDependencies": {
     "grunt": "^0.4.4",
