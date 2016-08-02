@@ -44,3 +44,5 @@
 		- grunt addDevItems // add items --- 需要在task/底下有一个seed_items.csv
 	- grunt build
 	- 启动网站：npm start
+		- 换模式启动NODE_NV=test; npm start
+		- 换端口启动：修改config/devemopment.json 或者test.json
