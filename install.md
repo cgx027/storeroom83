@@ -15,7 +15,8 @@
 	- extract
 		- tar -xf elasticsearch-1.4.2.tar.gz
 		- cd elasticsearch-1.4.2/
-	- Install plugin: 
+	- Install Java: sudo apt-get install openjdk-7-jre-headless
+        - Install plugin: 
 		- link:
 			- https://github.com/richardwilly98/elasticsearch-river-mongodb
 			- http://www.searchtech.pro/elasticsearch-plugins
