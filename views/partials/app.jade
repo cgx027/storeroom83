@@ -26,13 +26,13 @@ doctype
 
 .container-fluid
     .row
-        .col-sm-3.col-md-2.sidebar
-            ul.nav.nav-sidebar
+        .col-xs-3.col-sm-3.col-md-3
+            ul.nav
                 li(ng-class="{active: $state.current.activeNav === 'dashboard'}")
                     a(ui-sref="dashboard")
                         i.fa.fa-tachometer.fa-fw
                         | &nbsp;Dashboard
-            ul.nav.nav-sidebar
+            ul.nav
                 li(ng-class="{active: $state.current.activeNav === 'inventory'}")
                     a(ng-click="sidebarService.collapsed.inventory = !sidebarService.collapsed.inventory")
                         i.fa.fa-barcode.fa-fw
@@ -46,7 +46,9 @@ doctype
                             a(ui-sref="inventory.items") Items
                         li(ng-class="{active: $state.current.activeSubNav === 'inventories'}")
                             a(ui-sref="inventory.inventories") Inventory
-        .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+                        li(ng-class="{active: $state.current.activeSubNav === 'inventories'}")
+                            a(ui-sref="inventory.boms") BOMs
+        .col-xs-9.col-sm-9.col-md-9.main
             div
                 alert(ng-repeat="alert in inlineAlerts", type="alert.type", close="closeInlineAlert($index)") {{ alert.msg }}
             .view(ui-view)

@@ -115,11 +115,11 @@ module.exports = function(grunt) {
         csv().from.path(path.join(__dirname,'seed_items.csv'))
             .on('record', function(row){
                 items.push(new Item({
-                    partNumber: row[0],
-                    commodity: row[1],
+                    partNumber: row[9],
+                    commodity: row[10],
                     description: row[2],
-                    orderUnitOfMeasure: row[4],
-                    issueUnitOfMeasure: row[4],
+                    orderUnitOfMeasure: row[11],
+                    issueUnitOfMeasure: row[11],
                     vendorParts: [
                         {
                             vendor: {
@@ -127,13 +127,13 @@ module.exports = function(grunt) {
                                 code: "GRAINGER",
                                 name: "Grainger LLC"
                             },
-                            unitOfMeasure: row[4],
-                            qtyPerUnitOfMeasure: row[5],
-                            vendorPartNumber: row[8],
+                            unitOfMeasure: row[11],
+                            qtyPerUnitOfMeasure: row[7],
+                            vendorPartNumber: row[3],
                             manufacturer: row[6],
-                            manufacturerPartNumber: row[7],
-                            manufacturerRetailPrice: row[9],
-                            lastPrice: row[10]
+                            manufacturerPartNumber: row[3],
+                            manufacturerRetailPrice: row[12],
+                            lastPrice: row[13]
                         }]
                 }));
             })
